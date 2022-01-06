@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/movieRow.css'
+import { NavigateBefore, NavigateNext } from '@mui/icons-material';
 
 export default ({ title, items }) => {
     const [scrollX, setScrollX] = useState(-400);
@@ -17,10 +18,10 @@ export default ({ title, items }) => {
         <div className='movieRow'>
             <h2>{title}</h2>
             <div className="movieRow-left" onClick={handleLeftArrow}>
-
+                <NavigateBefore style={{ fontSize: 50 }} />
             </div>
             <div className="movieRow-right">
-
+                <NavigateNext style={{ fontSize: 50 }} />
             </div>
             <div className="movieRow-listarea">
                 <div className="movieRow-list" style={{
